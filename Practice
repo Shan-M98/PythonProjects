@@ -1,0 +1,41 @@
+#Modifying 2D lists
+
+#Your code below:
+incoming_class = [["Kenny", "American", 9], ["Tanya", "Ukrainian", 9], ["Madison", "Indian", 7]]
+
+print(incoming_class)
+
+incoming_class[2][2] = 8
+print(incoming_class)
+
+incoming_class[-3][-3] = "Ken"
+print(incoming_class)
+-------------------------------------------------------------------------------------------------------
+
+# Your code below: 
+
+# This list indicates first names
+first_names = ["Ainsley", "Ben", "Chani", "Depak"]
+
+preferred_size = ["Small", "Large", "Medium"]
+
+# We forgot to add Depak's size 
+preferred_size.append("Medium")
+print(preferred_size)
+
+# Maria is having trouble! Restructure the two lists into a two dimensional list
+
+customer_data = [["Ainsley", "Small", True], ["Ben", "Large", False], ["Chani", "Medium", True], ["Depak", "Medium", False]]
+print(customer_data)
+
+# Chani changed her mind! She want regular shipping
+customer_data[2][2] = False
+
+#Remove Ben's shipping choice
+customer_data[1].remove(False)
+
+# Add Amit and Karim 
+customer_data_final = customer_data + [["Amit", "Large", True], ["Karim", "X-Large", False]]
+print(customer_data_final)
+
+
