@@ -37,5 +37,287 @@ customer_data[1].remove(False)
 # Add Amit and Karim 
 customer_data_final = customer_data + [["Amit", "Large", True], ["Karim", "X-Large", False]]
 print(customer_data_final)
+---------------------------------------------------------------------------------------------------------------------------------------
+Python 3 gradebook project
+# last_semester_gradebook = [["politics", 80], ["latin", 96], ["dance", 97], ["architecture", 65]]
+
+# Step 1: Create Lists for Subjects and Grades
+subjects = ["physics", "calculus", "poetry", "history"]
+grades = [98, 97, 85, 88]
+
+# Step 2: Manually Create a Two-Dimensional List (gradebook)
+gradebook = [
+    [subjects[0], grades[0]],
+    [subjects[1], grades[1]],
+    [subjects[2], grades[2]],
+    [subjects[3], grades[3]]
+]
+
+# Step 5: Append Computer Science Grade
+gradebook.append(["computer science", 100])
+
+# Step 6: Append Visual Arts Grade
+gradebook.append(["visual arts", 93])
+
+# Step 7: Modify Visual Arts Grade
+gradebook[4][1] += 5
+
+# Step 8: Switch Poetry Grade to Pass/Fail
+poetry_index = 2
+gradebook[poetry_index].remove(85)
+gradebook[poetry_index].append("Pass")
+
+# Step 10: Combine Last Semester's Gradebook with Current Gradebook
+last_semester_gradebook = [["politics", 80], ["latin", 96], ["dance", 97], ["architecture", 65]]
+full_gradebook = last_semester_gradebook + gradebook
+
+# Print gradebook and full_gradebook
+print("Gradebook:")
+print(gradebook)
+print("\nFull Gradebook:")
+print(full_gradebook)
+-----------------------------------------------------------------------------------------------------------------------
+.insert() 
+
+# Step one: Run this
+front_display_list = ["Mango", "Filet Mignon", "Chocolate Milk"]
+print(front_display_list)
+
+# Step 2: Insert Pineapple 
+front_display_list.insert(0, "Pineapple")
+print(front_display_list)
+-------------------------------------------------------------------------------------------------------------------------
+Consecutive Lists
+
+# Your code below: 
+
+number_list = range(9)
+print(list(number_list))
+
+zero_to_seven = range(8)
+print(list(zero_to_seven))
+
+# Your code below: 
+
+range_five_three = range(5, 15, 3)
+
+# Create a range called range_diff_five that starts at 0, different of 5, ends before 40
+range_diff_five = range(0, 40, 5)
+-------------------------------------------------------------------------------------------------------------------------
+len() # This function provides the length of lists
+
+long_list = [1, 5, 6, 7, -23, 69.5, True, "very", "long", "list", "that", "keeps", "going.", "Let's", "practice", "getting", "the", "length"]
+
+big_range = range(2, 3000, 100)
+
+# Your code below: 
+
+#Calculate the length of long_list and save it to the variable lost_list_len
+long_list_len = len(long_list)
+print(long_list_len)
+
+big_range_length = len(big_range)
+print(big_range_length)
+------------------------------------------------------------------------------------------------------------------------------------------
+# while (loops)
+
+# While Loop Walkthrough
+count = 0
+print("Starting While Loop")
+while count <= 3:
+  # Loop Body
+  # Print if the condition is still true
+  print("Loop Iteration - count <= 3 is still true")
+  # Print the current value of count 
+  print("Count is currently " + str(count))
+  # Increment count
+  count += 1
+  print(" ----- ")
+print("While Loop ended")
+
+# Your code below: 
+countdown = 10
+while countdown >= 0:
+  print(countdown)
+  countdown -= 1
+
+print("We have liftoff!")
+------------------------------------------------------------------------------------------------------------------
+python_topics = ["variables", "control flow", "loops", "modules", "classes"]
+
+#Your code below: 
+length = len(python_topics)
+index = 0
+
+while index < length:
+  print("I am learning about" + python_topics[index])
+  index += 1
+------------------------------------------------------------------------------------------------------------------------------
+dog_breeds_available_for_adoption = ["french_bulldog", "dalmatian", "shihtzu", "poodle", "collie"]
+dog_breed_I_want = "dalmatian"
+
+for dog_breed in dog_breeds_available_for_adoption:
+  print(dog_breed)
+  if dog_breed == dog_breed_I_want:
+    break
+
+print("They have the dog I want!")
+--------------------------------------------------------------------------------------------------------------------------------
+sales_data = [[12, 17, 22], [2, 10, 3], [5, 12, 13]]
+scoops_sold = 0
+
+for location in sales_data:
+  for scoops in location:
+      scoops_sold += scoops # add each element to scoops sold
+
+print(scoops_sold)
+----------------------------------------------------------------------------------------------------------------------
+suitcase = ["shirt", "shirt", "pants", "pants", "pajamas", "books"]
+
+# Your code below: 
+last_two_elements = suitcase[-2:]
+print(last_two_elements)
+
+slice_off_last_three = suitcase[:-3]
+print(slice_off_last_three)
+-----------------------------------------------------------------------------------------------------------
+
+votes = ["Jake", "Jake", "Laurie", "Laurie", "Laurie", "Jake", "Jake", "Jake", "Laurie", "Cassie", "Cassie", "Jake", "Jake", "Cassie", "Laurie", "Cassie", "Jake", "Jake", "Cassie", "Laurie"]
+
+# Count jake's votes: 
+jake_votes = votes.count("Jake")
+print(jake_votes)
+--------------------------------------------------------------------------------------------------------------
+inventory = ["twin bed", "twin bed", "headboard", "queen bed", "king bed", "dresser", "dresser", "table", "table", "nightstand", "nightstand", "king bed", "king bed", "twin bed", "twin bed", "sheets", "sheets", "pillow", "pillow"]
+
+inventory_len = len(inventory)
+first = inventory[1]
+last = inventory[-1]
+inventory_2_6 = inventory[2:6]
+first_3 = inventory[:3]
+twin_beds = inventory.count("twin bed")
+removed_item = inventory.pop(4)
+inventory.insert(10, "19th Century Bed Frame")
+inventory.sort()
+print(inventory)
+--------------------------------------------------------------------------------------------------------------
+# Your code below:
+# Create a list for toppings
+toppings = ["pepperoni", "pineapple", "cheese", "sausage", "olives", "anchovies", "mushrooms"]
+# Create a list for prices
+prices = [2, 6, 1, 3, 2, 7, 2]
+# Count number of 2s and assign it to a variable called num_two_dollar_slices
+num_two_dollar_slices = prices.count(2)
+print(num_two_dollar_slices)
+# Find topping list length and store it to a variable valled num _pizzas
+num_pizzas = len(toppings)
+print(num_pizzas)
+
+# We sell 7 different kinds of pizza!
+print("We sell " + str(num_pizzas) + " different kinds of pizza!")
+
+pizza_and_prices = [[2, "pepperoni"], [6, "pineapple"], [1, "cheese"], [3, "sausage"], [2, "olives"], [7, "anchovies"], [2, "mushrooms"]]
+
+print(pizza_and_prices)
+
+pizza_and_prices.sort()
+print(pizza_and_prices)
+
+cheapest_pizza = pizza_and_prices[0]
+print(cheapest_pizza)
+
+priciest_pizza = pizza_and_prices[6]
+print(priciest_pizza)
+
+pizza_and_prices.pop()
+print(pizza_and_prices)
+
+pizza_and_prices.append([2.5, "peppers"])
+print(pizza_and_prices)
+
+three_cheapest = pizza_and_prices[:3]
+print(three_cheapest)
+------------------------------------------------------------------------------
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
